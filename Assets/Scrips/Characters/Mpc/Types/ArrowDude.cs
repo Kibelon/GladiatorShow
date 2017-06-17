@@ -24,12 +24,12 @@ public class ArrowDude : MpcController {
 		this.gameObject.transform.rotation = Quaternion.LookRotation (forward, Vector3.up);
 		//advancing
 		Mover(Vector2.right * walkSpeed);*/
-		Mover(Vector2.zero);
+		applyMoovement(Vector2.zero);
 
 	}
 
 	protected override void beingActive(){
-		Mover(Vector2.zero);
+		applyMoovement(Vector2.zero);
 	}
 
 	protected override void closeToEnemy (){
@@ -37,7 +37,7 @@ public class ArrowDude : MpcController {
 		forward.y = 0;
 		this.gameObject.transform.rotation = Quaternion.LookRotation (forward, Vector3.up);
 		//advancing
-		Mover(Vector2.zero);
+		applyMoovement(Vector2.zero);
 		//aiming
 		distanceVector = enemy.transform.position - this.gameObject.transform.position;
 		travelTime = Mathf.Sqrt(distanceVector.x * distanceVector.x + distanceVector.z * distanceVector.z)/(arrowSpeed); // T = D/V

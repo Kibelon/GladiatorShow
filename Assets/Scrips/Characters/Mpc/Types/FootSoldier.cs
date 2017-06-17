@@ -10,7 +10,7 @@ public class FootSoldier : MpcController {
 		forward.y = 0;
 		this.gameObject.transform.rotation = Quaternion.LookRotation (forward, Vector3.up);
 		//advancing
-		Mover(Vector2.right * walkSpeed);
+		applyMoovement(Vector2.right * walkSpeed);
 	}
 
 	protected override void getToPlace(){
@@ -19,12 +19,12 @@ public class FootSoldier : MpcController {
 		forward.y = 0;
 		this.gameObject.transform.rotation = Quaternion.LookRotation (forward, Vector3.up);
 		//advancing
-		Mover(Vector2.right * walkSpeed);
+		applyMoovement(Vector2.right * walkSpeed);
 
 	}
 
 	protected override void beingActive(){
-		Mover(Vector2.zero);
+		applyMoovement(Vector2.zero);
 	}
 
 	protected override void closeToEnemy (){
@@ -32,7 +32,7 @@ public class FootSoldier : MpcController {
 		forward.y = 0;
 		this.gameObject.transform.rotation = Quaternion.LookRotation (forward, Vector3.up);
 		//advancing
-		Mover(Vector2.zero);
+		applyMoovement(Vector2.zero);
 	}
 
 }

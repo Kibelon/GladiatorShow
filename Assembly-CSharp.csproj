@@ -46,16 +46,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\mpc\scripts\ArrowDude.cs" />
-     <Compile Include="Assets\mpc\scripts\FootSoldier.cs" />
-     <Compile Include="Assets\mpc\scripts\HiveMind.cs" />
-     <Compile Include="Assets\mpc\scripts\MpcController.cs" />
-     <Compile Include="Assets\player\scrips\CharPhysics.cs" />
-     <Compile Include="Assets\player\scrips\ControlPersonaje.cs" />
-     <Compile Include="Assets\weapon\scripts\Arrow.cs" />
-     <Compile Include="Assets\weapon\scripts\Bow.cs" />
-     <Compile Include="Assets\weapon\scripts\Sword.cs" />
-     <Compile Include="Assets\weapon\scripts\Weapon.cs" />
+     <Compile Include="Assets\Scrips\Characters\Mpc\HiveMind.cs" />
+     <Compile Include="Assets\Scrips\Characters\Mpc\MpcController.cs" />
+     <Compile Include="Assets\Scrips\Characters\Mpc\Types\ArrowDude.cs" />
+     <Compile Include="Assets\Scrips\Characters\Mpc\Types\FootSoldier.cs" />
+     <Compile Include="Assets\Scrips\Characters\Player\PlayerControl.cs" />
+     <Compile Include="Assets\Scrips\Characters\Walker.cs" />
+     <Compile Include="Assets\Scrips\Weapons\Bow.cs" />
+     <Compile Include="Assets\Scrips\Weapons\Projectiles\Arrow.cs" />
+     <Compile Include="Assets\Scrips\Weapons\Sword.cs" />
+     <Compile Include="Assets\Scrips\Weapons\Weapon.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/home/kibelon/unity-editor-5.5.3xf1Linux/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

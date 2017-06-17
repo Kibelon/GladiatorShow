@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MpcController : CharPhysics {
+public class MpcController : Walker {
 
 	//AI states
 	public enum States {Rest, Active, Defending, Atacking};
@@ -118,6 +118,6 @@ public class MpcController : CharPhysics {
 			beingActive ();
 		}
 
-		Actualizar (); // updates the moovement
+		refresh (); // updates the moovement
 	}
 }

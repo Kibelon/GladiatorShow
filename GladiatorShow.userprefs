@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/mpc/scripts/MpcController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scrips/Characters/Player/PlayerControl.cs">
     <Files>
-      <File FileName="Assets/mpc/scripts/MpcController.cs" Line="28" Column="20" />
+      <File FileName="Assets/Scrips/Characters/Walker.cs" Line="80" Column="1" />
+      <File FileName="Assets/Scrips/Characters/Player/PlayerControl.cs" Line="61" Column="51" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
