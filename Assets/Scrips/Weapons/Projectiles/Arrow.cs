@@ -32,8 +32,8 @@ public class Arrow : MonoBehaviour {
 		if (!done) {
 			nextPos = this.transform.position + currentSpeed * Time.deltaTime;
 			if (Physics.Linecast (this.transform.position, nextPos, out hit)) {
-				if (hit.collider.tag == damagableTag) {
-					hit.collider.gameObject.SendMessage ("hurt", damage);
+				if (hit.collider.gameObject.GetComponent<Damagable> () != null){
+					hit.collider.gameObject.GetComponent<Damagable> ().hurt (damage, DamageType.pirsing);
 				}
 				this.transform.SetParent (hit.transform);
 				this.transform.position = hit.point; //stucks the arrow at a predictible depth

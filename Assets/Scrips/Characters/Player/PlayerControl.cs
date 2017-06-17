@@ -5,12 +5,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerControl : Walker {
+public class PlayerControl : Walker, Damagable {
 //:::::::::::::::::::::::::::: Class parameters ::::::::::::::::::::::::::::::::::::::::
 	//+++++++++++++++++++++++++++++ Constant parameters ++++++++++++++++++++++++++++++
 	public float walkingSpeed = 2;
 	public float mouseSensivility = 1;
 	public Transform headCamera;
+	public float[] damageResistance = { 1, 1, 1, 0.5f, 0.5f };
 
 	//+++++++++++++++++++++++++++++ Button names ++++++++++++++++++++++++++++++
 	public string forwardAxis = "Vertical";
@@ -27,10 +28,28 @@ public class PlayerControl : Walker {
 	public float health = 100;
 
 //:::::::::::::::::::::::::::: Publicly available Interface ::::::::::::::::::::::::::::::::::::::::
-	public void hurt (float damage){
-		health -= damage;
+	public void hurt (float value, DamageType type){
+
+		switch (type){
+		case DamageType.blunt:
+			health -= value * damageResistance [0];
+			break;
+		case DamageType.pirsing:
+			health -= value * damageResistance [1];
+			break;
+		case DamageType.fire:
+			health -= value * damageResistance [2];
+			break;
+		case DamageType.electric:
+			health -= value * damageResistance [3];
+			break;
+		case DamageType.corrosive:
+			health -= value * damageResistance [4];
+			break;
+		}
 		if (health <= 0) {
 			health = 0;
+			HiveMind.imDead (this, true);
 			Destroy (this.gameObject);
 		}
 	}

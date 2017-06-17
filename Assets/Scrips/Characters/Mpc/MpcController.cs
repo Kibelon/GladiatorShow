@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MpcController : Walker {
+public class MpcController : Walker, Damagable {
 
 	//AI states
 	public enum States {Rest, Active, Defending, Atacking};
@@ -12,6 +12,7 @@ public class MpcController : Walker {
 	public Vector3	objectivePosition;		//the positionof deffense
 	public float sightDistance = 10f;		//distance at witch detect enemys
 	public bool amIgood = false;			//determines weather an MPC is an enemy or not
+	public float[] damageResistance = { 1, 1, 1, 0.5f, 0.5f };
 
 	public float health = 100;
 	public Weapon weapon;
@@ -24,11 +25,28 @@ public class MpcController : Walker {
 	public float walkSpeed = 1;
 	public float rotationSpeed = 1;
 
-	public void hurt (float damage){
-		health -= damage;
+	public void hurt (float value, DamageType type){
+
+		switch (type){
+		case DamageType.blunt:
+			health -= value * damageResistance [0];
+			break;
+		case DamageType.pirsing:
+			health -= value * damageResistance [1];
+			break;
+		case DamageType.fire:
+			health -= value * damageResistance [2];
+			break;
+		case DamageType.electric:
+			health -= value * damageResistance [3];
+			break;
+		case DamageType.corrosive:
+			health -= value * damageResistance [4];
+			break;
+		}
 		if (health <= 0) {
 			health = 0;
-			HiveMind.imDead (this, amIgood);
+			HiveMind.imDead (this, false);
 			Destroy (this.gameObject);
 		}
 	}

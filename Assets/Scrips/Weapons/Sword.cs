@@ -12,8 +12,8 @@ public class Sword : Weapon {
 	override public void atack (){
 
 		foreach (RaycastHit hit in Physics.SphereCastAll(sphereOrigin.position, sphereRadius, sphereOrigin.forward,0)) {
-			if (hit.collider.tag == damagableTag) {
-				hit.collider.gameObject.SendMessage ("hurt", damagePower);
+			if (hit.collider.gameObject.GetComponent<Damagable> () != null){
+				hit.collider.gameObject.GetComponent<Damagable> ().hurt (damagePower, DamageType.pirsing);
 			}
 		}
 	}
