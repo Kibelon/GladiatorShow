@@ -12,6 +12,8 @@ public class PlayerControl : Walker, Damagable {
 	public float mouseSensivility = 1;
 	public Transform headCamera;
 	public float[] damageResistance = { 1, 1, 1, 0.5f, 0.5f };
+	public Transform hand1; // The hands that hold the weapons
+	public Transform hand2;
 
 	//+++++++++++++++++++++++++++++ Button names ++++++++++++++++++++++++++++++
 	public string forwardAxis = "Vertical";
@@ -86,6 +88,16 @@ public class PlayerControl : Walker, Damagable {
 		}
 
 		//.........................................atack control...........................................
+
+		//--- Aiming ---
+		RaycastHit hit;
+		if (Physics.Raycast (headCamera.position, headCamera.forward, out hit, 100)) {
+			hand1.LookAt (hit.point);
+			hand2.LookAt (hit.point);
+		} else {
+			hand1.localRotation = Quaternion.identity;
+			hand2.localRotation = Quaternion.identity;
+		}
 
 		if (Input.GetAxis (atackButton1) > 0 && firstWeapon != null) {
 			firstWeapon.atack ();
