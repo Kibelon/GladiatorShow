@@ -1,49 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿/********************************************
+ * Maded by Jesús Gracia Güell 18/6/2017	*
+********************************************/
 
-/// <summary>
-/// The base class of all weapons
-/// </summary>
-public abstract class Weapon : MonoBehaviour {
 
-	private bool atacking = false;
-	protected int amunition = 0;
-	private float health = 100; //health of the weapon
-	public const float MAX_HEALTH = 100;
+public interface Weapon {
 
-	public abstract void atack ();
-
-	public bool isAtacking (){
-		return atacking;
+	int amunition {
+		get;
+		set;
 	}
 
-	public int getAmunition (){
-		return amunition;
+	WeaponType type {
+		get;
 	}
 
-	public int setAmunition (){
-		return amunition;
-	}
+	/// <summary>
+	/// Framecall contains all the control of the weapon functionality
+	/// </summary>
+	void framecall ();
 
-	public float gethealth (){
-		return health;
-	}
+	/// <summary>
+	/// Exit called when te weapon gets exchanged.
+	/// </summary>
+	void exit();
 
-	public void hurt (float damage){
-		health -= damage;
-		if (health <= 0) {
-			health = 0;
-			die ();
-		}
-	}
-
-	public void heal (float amount){
-		health += amount;
-		if (health > MAX_HEALTH) {
-			health = MAX_HEALTH;
-		}
-	}
-
-	public abstract void die ();
+	/// <summary>
+	/// Atack is called to fire the weapon forcefully.
+	/// </summary>
+	void atack ();
 }

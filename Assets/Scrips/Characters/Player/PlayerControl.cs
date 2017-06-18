@@ -25,9 +25,10 @@ public class PlayerControl : Walker, Damagable {
 	public string rotationYAxis = "Mouse Y";
 
 	//+++++++++++++++++++++++++++++ Runtime parameters ++++++++++++++++++++++++++++++
-	public Weapon firstWeapon;
-	public Weapon secondWeapon;
 	public float health = 100;
+	public GameObject[] weaponPrefabs = { null, null, null, null };
+	private Weapon[] weaponlist = {null, null, null, null};
+	private int currentWeapon = 0;
 
 //:::::::::::::::::::::::::::: Publicly available Interface ::::::::::::::::::::::::::::::::::::::::
 	public void hurt (float value, DamageType type){
@@ -59,23 +60,18 @@ public class PlayerControl : Walker, Damagable {
 //:::::::::::::::::::::::::::: Hiden functions ::::::::::::::::::::::::::::::::::::::::
 	protected override void Start () {
 		HiveMind.imaGoodGuy (this);
+
+		// Weapon inisialization
+		for(int i = 0; i < 4; i++){
+			if (weaponPrefabs [i] != null) {
+				weaponlist [i] = weaponPrefabs [i].GetComponent<Weapon> ();
+			}
+		}
+
 		base.Start ();
 	}
 		
 	void Update () {
-
-		//.........................................movement control...........................................
-		//walking
-		applyMoovement (new Vector2 (Input.GetAxis (forwardAxis), Input.GetAxis (sidewaysAxis)) * walkingSpeed);
-
-		//jumping
-		if (Input.GetButton (jumpButton)) {
-			applyJump ();
-		}
-
-		//Update the character position
-		refresh ();
-
 		//.........................................rotation control...........................................
 
 		this.gameObject.transform.Rotate (new Vector3 (0, Input.GetAxisRaw (rotationXAxis) * mouseSensivility, 0));
@@ -98,14 +94,21 @@ public class PlayerControl : Walker, Damagable {
 			hand1.localRotation = Quaternion.identity;
 			hand2.localRotation = Quaternion.identity;
 		}
+		//executing weapon code
+		weaponlist [currentWeapon].framecall();
 
-		if (Input.GetAxis (atackButton1) > 0 && firstWeapon != null) {
-			firstWeapon.atack ();
+		//.........................................movement control...........................................
+		//walking
+		applyMoovement (new Vector2 (Input.GetAxis (forwardAxis), Input.GetAxis (sidewaysAxis)) * walkingSpeed);
+
+		//jumping
+		if (Input.GetButton (jumpButton)) {
+			applyJump ();
 		}
 
-		if (Input.GetAxis (atackButton2) > 0 && secondWeapon != null) {
-			secondWeapon.atack ();
-		}
+		//Update the character position
+		refresh ();
+
 
 	}
 }

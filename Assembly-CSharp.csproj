@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scrips\Weapons\Projectiles\Arrow.cs" />
      <Compile Include="Assets\Scrips\Weapons\Sword.cs" />
      <Compile Include="Assets\Scrips\Weapons\Weapon.cs" />
+     <Compile Include="Assets\Scrips\Weapons\WeaponType.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/home/kibelon/unity-editor-5.5.3xf1Linux/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

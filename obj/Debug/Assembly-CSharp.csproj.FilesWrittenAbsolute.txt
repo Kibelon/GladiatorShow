@@ -1,0 +1,17 @@
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/UnityEngine.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/UnityEditor.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/UnityEngine.UI.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/UnityEngine.Networking.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/UnityEngine.Analytics.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/UnityEngine.VR.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/Unity.DataContract.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/Mono.Cecil.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/Unity.SerializationLogic.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/Unity.UNetWeaver.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/Unity.CecilTools.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/home/kibelon/Proyectos/GladiatorShow/Temp/bin/Debug/Mono.Cecil.Mdb.dll

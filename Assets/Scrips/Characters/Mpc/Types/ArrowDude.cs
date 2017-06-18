@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowDude : MpcController {
 
-	private Bow bow; 
+	//private Bow bow; 
 	//frame variables
 	private float travelTime = 0;
 	private Vector3 distanceVector;
@@ -12,8 +12,7 @@ public class ArrowDude : MpcController {
 	private float arrowSpeed;
 
 	protected override void Start () {
-		bow = weapon.GetComponent<Bow> ();
-		arrowSpeed = bow.buletSpeed;
+		//arrowSpeed = bow.buletSpeed;
 		base.Start ();
 	}
 
@@ -43,6 +42,6 @@ public class ArrowDude : MpcController {
 		travelTime = Mathf.Sqrt(distanceVector.x * distanceVector.x + distanceVector.z * distanceVector.z)/(arrowSpeed); // T = D/V
 		forwardVector = this.transform.forward;
 		forwardVector.y = ((distanceVector.y + (4.9f * (travelTime * travelTime)))/travelTime)/ arrowSpeed; // Vy = (y - (1/2) * g * T^2) / T
-		weapon.transform.forward = forwardVector;
+		//weapon.transform.forward = forwardVector;
 	}
 }

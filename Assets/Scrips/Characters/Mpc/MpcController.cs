@@ -124,7 +124,7 @@ public class MpcController : Walker, Damagable {
 			if ((this.transform.position - enemy.transform.position).sqrMagnitude < atackRange) {
 				//the enemy is in range
 				if ((Time.time - lastAtackTime) > nextAtack) {
-					weapon.atack ();
+					atack ();
 					lastAtackTime = Time.fixedTime;
 					nextAtack = atackFrequency + Random.Range (-atackdiference, atackdiference);
 				}
@@ -137,5 +137,9 @@ public class MpcController : Walker, Damagable {
 		}
 
 		refresh (); // updates the moovement
+	}
+
+	public void atack(){
+		
 	}
 }
