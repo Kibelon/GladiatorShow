@@ -6,12 +6,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bow : MonoBehaviour, Weapon {
-
+//:::::::::::::::::::::::::::: Class parameters ::::::::::::::::::::::::::::::::::::::::
+	//+++++++++++++++++++++++++++++ Constant parameters ++++++++++++++++++++++++++++++
 	public Transform endOfBarrel;
 	public GameObject bulet;
 	public float buletSpeed = 10f;
 	public float acuracy = 0.01f;
-	public string fireButton = "Fire1";
+
+	//+++++++++++++++++++++++++++++ Button names ++++++++++++++++++++++++++++++
+	public string fireButton = "Shoot";
+
+	//+++++++++++++++++++++++++++++ Runtime parameters ++++++++++++++++++++++++++++++
+	public bool triggered = false;
 
 	public int amunition{
 		get;
@@ -23,8 +29,15 @@ public class Bow : MonoBehaviour, Weapon {
 	}
 		
 	public void framecall (){
-		if(Input.GetButtonDown(fireButton)){
-			atack ();
+		if (triggered) {
+			if (Input.GetAxis (fireButton) == 0) {
+				triggered = false;
+			}
+		}else{
+			if (Input.GetAxis (fireButton) > 0) {
+				atack ();
+				triggered = true;
+			}
 		}
 	}
 

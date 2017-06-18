@@ -99,7 +99,7 @@ public class PlayerControl : Walker, Damagable {
 
 		//.........................................movement control...........................................
 		//walking
-		applyMoovement (new Vector2 (Input.GetAxis (forwardAxis), Input.GetAxis (sidewaysAxis)) * walkingSpeed);
+		applyMoovement ((new Vector2 (Input.GetAxis (forwardAxis), Input.GetAxis (sidewaysAxis))).normalized * walkingSpeed);
 
 		//jumping
 		if (Input.GetButton (jumpButton)) {
