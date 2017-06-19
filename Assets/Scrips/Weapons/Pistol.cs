@@ -5,14 +5,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bow : MonoBehaviour, Weapon {
-//:::::::::::::::::::::::::::: Class parameters ::::::::::::::::::::::::::::::::::::::::
+public class Pistol : MonoBehaviour, Weapon {
+
+	//:::::::::::::::::::::::::::: Class parameters ::::::::::::::::::::::::::::::::::::::::
 	//+++++++++++++++++++++++++++++ Constant parameters ++++++++++++++++++++++++++++++
 	public Transform endOfBarrel;
 	public GameObject bulet;
 	public float buletSpeed = 10f;
 	public float acuracy = 0.01f;
-	public float bowTension = 0;
 
 	//+++++++++++++++++++++++++++++ Button names ++++++++++++++++++++++++++++++
 	public string fireButton = "Shoot";
@@ -28,7 +28,7 @@ public class Bow : MonoBehaviour, Weapon {
 	public WeaponType type {
 		get;
 	}
-		
+
 	public void framecall (){
 		if (triggered) {
 			if (Input.GetAxis (fireButton) == 0) {
@@ -43,16 +43,16 @@ public class Bow : MonoBehaviour, Weapon {
 	}
 
 	public void exit(){
-		
+
 	}
 
 	void Start () {
 		amunition = 20;
 	}
-	
+
 	public void atack (){
-		
-		Instantiate (bulet, endOfBarrel.position, Quaternion.Euler( endOfBarrel.eulerAngles + (Random.insideUnitSphere * acuracy))).SendMessage("setSpeed",buletSpeed);
+
+		Instantiate (bulet, endOfBarrel.position, Quaternion.Euler (endOfBarrel.eulerAngles + (Random.insideUnitSphere * acuracy)));
 
 	}
 

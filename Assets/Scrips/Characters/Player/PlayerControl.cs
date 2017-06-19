@@ -94,8 +94,7 @@ public class PlayerControl : Walker, Damagable {
 			hand1.localRotation = Quaternion.identity;
 			hand2.localRotation = Quaternion.identity;
 		}
-		//executing weapon code
-		weaponlist [currentWeapon].framecall();
+
 
 		//.........................................movement control...........................................
 		//walking
@@ -108,6 +107,8 @@ public class PlayerControl : Walker, Damagable {
 
 		//Update the character position
 		refresh ();
+		//executing weapon code
+		weaponlist [currentWeapon].framecall();
 
 
 	}

@@ -55,7 +55,10 @@
      <Compile Include="Assets\Scrips\Characters\Player\PlayerControl.cs" />
      <Compile Include="Assets\Scrips\Characters\Walker.cs" />
      <Compile Include="Assets\Scrips\Weapons\Bow.cs" />
+     <Compile Include="Assets\Scrips\Weapons\MachineGun.cs" />
+     <Compile Include="Assets\Scrips\Weapons\Pistol.cs" />
      <Compile Include="Assets\Scrips\Weapons\Projectiles\Arrow.cs" />
+     <Compile Include="Assets\Scrips\Weapons\Projectiles\Bullet.cs" />
      <Compile Include="Assets\Scrips\Weapons\Sword.cs" />
      <Compile Include="Assets\Scrips\Weapons\Weapon.cs" />
      <Compile Include="Assets\Scrips\Weapons\WeaponType.cs" />

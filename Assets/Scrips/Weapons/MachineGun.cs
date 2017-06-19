@@ -1,24 +1,23 @@
-﻿/********************************************
- * Maded by Jesús Gracia Güell 18/6/2017	*
-********************************************/
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bow : MonoBehaviour, Weapon {
-//:::::::::::::::::::::::::::: Class parameters ::::::::::::::::::::::::::::::::::::::::
+public class MachineGun : MonoBehaviour, Weapon {
+
+	//:::::::::::::::::::::::::::: Class parameters ::::::::::::::::::::::::::::::::::::::::
 	//+++++++++++++++++++++++++++++ Constant parameters ++++++++++++++++++++++++++++++
 	public Transform endOfBarrel;
 	public GameObject bulet;
 	public float buletSpeed = 10f;
 	public float acuracy = 0.01f;
-	public float bowTension = 0;
+	public float firerate = 0.5f; //time between shots
 
 	//+++++++++++++++++++++++++++++ Button names ++++++++++++++++++++++++++++++
 	public string fireButton = "Shoot";
 
 	//+++++++++++++++++++++++++++++ Runtime parameters ++++++++++++++++++++++++++++++
 	public bool triggered = false;
+	public float lastShotTime = 0;
 
 	public int amunition{
 		get;
@@ -28,31 +27,27 @@ public class Bow : MonoBehaviour, Weapon {
 	public WeaponType type {
 		get;
 	}
-		
+
 	public void framecall (){
-		if (triggered) {
-			if (Input.GetAxis (fireButton) == 0) {
-				triggered = false;
-			}
-		}else{
-			if (Input.GetAxis (fireButton) > 0) {
-				atack ();
-				triggered = true;
-			}
+		if (Input.GetAxis (fireButton) > 0 && Time.time - lastShotTime > firerate) {
+			triggered = false;
+			lastShotTime = Time.time;
+			atack ();
 		}
+
 	}
 
 	public void exit(){
-		
+
 	}
 
 	void Start () {
 		amunition = 20;
 	}
-	
+
 	public void atack (){
-		
-		Instantiate (bulet, endOfBarrel.position, Quaternion.Euler( endOfBarrel.eulerAngles + (Random.insideUnitSphere * acuracy))).SendMessage("setSpeed",buletSpeed);
+
+		Instantiate (bulet, endOfBarrel.position, Quaternion.Euler (endOfBarrel.eulerAngles + (Random.insideUnitSphere * acuracy)));
 
 	}
 
