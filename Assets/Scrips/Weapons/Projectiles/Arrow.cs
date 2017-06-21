@@ -1,17 +1,21 @@
-﻿using System.Collections;
+﻿/********************************************
+ * Maded by Jesús Gracia Güell 21/6/2017	*
+********************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour {
 
+	//:::::::::::::::::::::::::::: Class parameters ::::::::::::::::::::::::::::::::::::::::
+	//+++++++++++++++++++++++++++++ Constant parameters ++++++++++++++++++++++++++++++
 	public float speed = 10;
 	public float gravity = 9.8f;
 	public float damage = 10;
 	public float timeStuck = 10;
 	public float ttl = 50;
+	//+++++++++++++++++++++++++++++ Runtime parameters ++++++++++++++++++++++++++++++
 	private Vector3 currentSpeed;
-	public string damagableTag = "Destructible";
-	//reserve space for frame functions
 	private Vector3 nextPos;
 	private RaycastHit hit;
 	private bool done = false;

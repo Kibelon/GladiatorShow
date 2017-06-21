@@ -16,6 +16,7 @@ public class Bow : MonoBehaviour, Weapon {
 
 	//+++++++++++++++++++++++++++++ Button names ++++++++++++++++++++++++++++++
 	public string fireButton = "Shoot";
+	public string pull = "Specialhav";
 
 	//+++++++++++++++++++++++++++++ Runtime parameters ++++++++++++++++++++++++++++++
 	public bool triggered = false;
@@ -31,12 +32,12 @@ public class Bow : MonoBehaviour, Weapon {
 		
 	public void framecall (){
 		if (triggered) {
-			if (Input.GetAxis (fireButton) == 0) {
+			if (Input.GetAxis (fireButton) == 0 && Input.GetAxis(pull) == 0) {
 				triggered = false;
 			}
 		}else{
 			if (Input.GetAxis (fireButton) > 0) {
-				atack ();
+				Instantiate (bulet, endOfBarrel.position, Quaternion.Euler( endOfBarrel.eulerAngles + (Random.insideUnitSphere * acuracy))).SendMessage("setSpeed",buletSpeed * Input.GetAxis(pull));
 				triggered = true;
 			}
 		}
