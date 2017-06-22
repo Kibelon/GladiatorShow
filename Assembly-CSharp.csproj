@@ -59,9 +59,13 @@
      <Compile Include="Assets\Scrips\Weapons\Pistol.cs" />
      <Compile Include="Assets\Scrips\Weapons\Projectiles\Arrow.cs" />
      <Compile Include="Assets\Scrips\Weapons\Projectiles\Bullet.cs" />
+     <Compile Include="Assets\Scrips\Weapons\Projectiles\ShockWave.cs" />
      <Compile Include="Assets\Scrips\Weapons\Sword.cs" />
      <Compile Include="Assets\Scrips\Weapons\Weapon.cs" />
      <Compile Include="Assets\Scrips\Weapons\WeaponType.cs" />
+     <None Include="Assets\Shaders\VertexColor\VertexColor.shader" />
+     <None Include="Assets\Shaders\VertexColor\SimpleVertexColor.shader" />
+     <None Include="Assets\Shaders\VertexColor\VertexColorRelieve.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
