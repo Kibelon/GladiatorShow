@@ -26,7 +26,7 @@ public class ShockWave : MonoBehaviour {
 		displacement = 0;
 		float radius = initialRadius;
 		while (displacement < reach) {
-			radius = Mathf.Lerp (initialRadius, finalRadius, reach / displacement);
+			radius = Mathf.Lerp (initialRadius, finalRadius, displacement / reach);
 			foreach (Collider hit in Physics.OverlapSphere(this.transform.position + this.transform.forward * (displacement + radius), radius)) {
 				if (!damaged.Contains(hit.gameObject) && hit.gameObject.GetComponent<Damagable> () != null) {
 					hit.gameObject.GetComponent<Damagable> ().hurt (damage / Vector3.Distance (this.transform.position, hit.transform.position), DamageType.blunt);

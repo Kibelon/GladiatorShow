@@ -1,17 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scrips\Weapons\Projectiles\ShockWave.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scrips\Weapons\Projectiles\Rocket.cs">
     <Files>
       <File FileName="Assets\Scrips\Characters\Walker.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scrips\Characters\Player\PlayerControl.cs" Line="161" Column="20" />
-      <File FileName="Assets\Scrips\Weapons\Weapon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scrips\Weapons\Bow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scrips\Weapons\Pistol.cs" Line="63" Column="1" />
-      <File FileName="Assets\Scrips\Weapons\Projectiles\Arrow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scrips\Characters\Player\PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scrips\Weapons\Pistol.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scrips\Weapons\Projectiles\Arrow.cs" Line="50" Column="5" />
       <File FileName="Assets\Scrips\Weapons\MachineGun.cs" Line="1" Column="1" />
-      <File FileName="Assets\Shaders\VertexColor\SimpleVertexColor.shader" Line="8" Column="31" />
-      <File FileName="Assets\Scrips\Weapons\Projectiles\Bullet.cs" Line="41" Column="6" />
-      <File FileName="Assets\Scrips\Weapons\Projectiles\ShockWave.cs" Line="33" Column="35" />
+      <File FileName="Assets\Shaders\VertexColor\SimpleVertexColor.shader" Line="1" Column="1" />
+      <File FileName="Assets\Scrips\Weapons\Projectiles\Bullet.cs" Line="10" Column="2" />
+      <File FileName="Assets\Scrips\Weapons\Projectiles\ShockWave.cs" Line="32" Column="1" />
+      <File FileName="Assets\Scrips\Weapons\Projectiles\Rocket.cs" Line="53" Column="83" />
+      <File FileName="Assets\Scrips\Hazards\Explosion.cs" Line="24" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 495}
   m_MaxSize: {x: 14004, y: 14045}
   vertical: 0
-  controlID: 23165
+  controlID: 35201
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 495}
   m_MaxSize: {x: 10002, y: 14045}
   vertical: 1
-  controlID: 23166
+  controlID: 35202
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 23167
+  controlID: 35203
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,9 +368,9 @@ MonoBehaviour:
     height: 650
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7296faff
+    m_SelectedIDs: 8244f9ff
     m_LastClickedID: 0
-    m_ExpandedIDs: 7ca8f9ffa67dfaff6484faffc4f8ffffe4fbffff00000000da250000fc25000008260000
+    m_ExpandedIDs: 98a6f6ff44aaf6ffc274feff4c56ffff7a56ffff4a72ffff7872ffffe4fbffff0000000004260000222600004a26000096260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -420,14 +420,14 @@ MonoBehaviour:
     width: 1285
     height: 650
   m_SceneLighting: 1
-  lastFramingTime: 13093.72313738096
+  lastFramingTime: 15652.575871433644
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.1648474, y: 4.6494017, z: 2.7292304}
+    m_Target: {x: -1.5358524, y: 4.834669, z: 2.6161327}
     speed: 2
-    m_Value: {x: -1.1648474, y: 4.6494017, z: 2.7292304}
+    m_Value: {x: -1.5358524, y: 4.834669, z: 2.6161327}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -450,13 +450,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.10648745, y: 0.5139649, z: -0.06448605, w: -0.8487298}
+    m_Target: {x: -0.12728527, y: 0.6623564, z: -0.11562029, w: -0.72918755}
     speed: 2
-    m_Value: {x: -0.10648744, y: 0.51396483, z: -0.06448604, w: -0.84872967}
+    m_Value: {x: -0.12728529, y: 0.6623564, z: -0.11562029, w: -0.72918755}
   m_Size:
-    m_Target: 6.881185
+    m_Target: 35.304222
     speed: 2
-    m_Value: 6.881185
+    m_Value: 35.304222
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -573,19 +573,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/weapon/prefabs/Projectiles
+    - Assets/Hazards
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/weapon/prefabs/Projectiles
+  - Assets/Hazards
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Kibelon\Documents\Mis Juegos\GladiatorShow
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 166}
-    m_SelectedIDs: 8a250000
-    m_LastClickedID: 9610
-    m_ExpandedIDs: 00000000d0240000f8240000102500002e2500003a25000044250000ae250000b8250000d227000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 78}
+    m_SelectedIDs: 06630000
+    m_LastClickedID: 25350
+    m_ExpandedIDs: 00000000d8240000002500001a25000044250000502500005a250000bc250000ca250000d625000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,7 +613,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d0240000f8240000102500002e2500003a25000044250000ae250000b8250000d227000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000d8240000002500001a25000044250000502500005a250000bc250000ca250000d625000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -720,7 +720,7 @@ MonoBehaviour:
     y: 92
     width: 425
     height: 926
-  m_ScrollPosition: {x: 0, y: 566.9551}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 450
