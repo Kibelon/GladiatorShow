@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scrips\Weapons\Pistol.cs" />
      <Compile Include="Assets\Scrips\Weapons\Projectiles\Arrow.cs" />
      <Compile Include="Assets\Scrips\Weapons\Projectiles\Bullet.cs" />
+     <Compile Include="Assets\Scrips\Weapons\Projectiles\Granade.cs" />
      <Compile Include="Assets\Scrips\Weapons\Projectiles\Rocket.cs" />
      <Compile Include="Assets\Scrips\Weapons\Projectiles\ShockWave.cs" />
      <Compile Include="Assets\Scrips\Weapons\Sword.cs" />
