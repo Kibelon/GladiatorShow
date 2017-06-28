@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scrips\Characters\Damagable.cs" />
      <Compile Include="Assets\Scrips\Characters\DamageType.cs" />
+     <Compile Include="Assets\Scrips\Characters\Mpc\Enemy\Dumy.cs" />
      <Compile Include="Assets\Scrips\Characters\Mpc\HiveMind.cs" />
      <Compile Include="Assets\Scrips\Characters\Mpc\MpcController.cs" />
      <Compile Include="Assets\Scrips\Characters\Mpc\Types\ArrowDude.cs" />
