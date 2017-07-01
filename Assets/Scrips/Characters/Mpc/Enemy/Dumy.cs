@@ -52,7 +52,7 @@ public class Dumy : Walker, Damagable {
 	}
 
 //:::::::::::::::::::::::::::: Hiden functions ::::::::::::::::::::::::::::::::::::::::
-	void Start () {
+	override protected void Start () {
 		if (imGood) {
 			HiveMind.imaGoodGuy (this);
 		} else {
@@ -79,7 +79,7 @@ public class Dumy : Walker, Damagable {
 				desiredRotation = objective.transform.position - this.transform.position;
 			}
 			desiredRotation.y = 0;
-			this.transform.forward = Vector3.RotateTowards (this.transform.forward, desiredRotation, turningSpeed, 0);
+			this.transform.forward = Vector3.RotateTowards (this.transform.forward, desiredRotation, turningSpeed * Time.deltaTime, 0);
 
 			//-------------------------- Moovement --------------------------
 			if (distance > close) {

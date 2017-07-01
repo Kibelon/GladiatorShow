@@ -9,7 +9,7 @@ public class ArrowDude : MpcController {
 	private float travelTime = 0;
 	private Vector3 distanceVector;
 	private Vector3 forwardVector;
-	private float arrowSpeed;
+	private float arrowSpeed = 0;
 
 	protected override void Start () {
 		//arrowSpeed = bow.buletSpeed;
