@@ -35,7 +35,7 @@ public class PlayerControl : Walker, Damagable {
 	private GameObject[] weaponsGameO = {null, null, null, null};
 	private Weapon[] weaponlist = {null, null, null, null};
 	public int currentWeapon = 0;
-
+	public PlayerUI ui;
 //:::::::::::::::::::::::::::: Publicly available Interface ::::::::::::::::::::::::::::::::::::::::
 	public void hurt (float value, DamageType type){
 
@@ -61,6 +61,8 @@ public class PlayerControl : Walker, Damagable {
 			HiveMind.imDead (this, true);
 			Destroy (this.gameObject);
 		}
+
+		ui.hpUpdate ((int)health);
 	}
 
 //:::::::::::::::::::::::::::: Hiden functions ::::::::::::::::::::::::::::::::::::::::

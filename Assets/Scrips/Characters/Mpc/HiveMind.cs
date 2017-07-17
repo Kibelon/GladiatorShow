@@ -104,4 +104,12 @@ public static class HiveMind {
 		}
 		return result;
 	}
+
+	public static int getNumOfBadGuys(){
+		return badGuys.Count;
+	}
+
+	public static int getNumOfGoodGuys(){
+		return goodGuys.Count;
+	}
 }

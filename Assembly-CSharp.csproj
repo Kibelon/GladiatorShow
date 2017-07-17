@@ -59,7 +59,17 @@
      <Compile Include="Assets\Scrips\Characters\Mpc\Types\FootSoldier.cs" />
      <Compile Include="Assets\Scrips\Characters\Player\PlayerControl.cs" />
      <Compile Include="Assets\Scrips\Characters\Walker.cs" />
+     <Compile Include="Assets\Scrips\GameControl\ArenaControlers\ArenaFight.cs" />
+     <Compile Include="Assets\Scrips\GameControl\ArenaControlers\EnemyDor.cs" />
+     <Compile Include="Assets\Scrips\GameControl\ArenaControlers\EnemyPack.cs" />
+     <Compile Include="Assets\Scrips\GameControl\ArenaControlers\EnemySpawner.cs" />
+     <Compile Include="Assets\Scrips\GameControl\StateMachine\Action.cs" />
+     <Compile Include="Assets\Scrips\GameControl\StateMachine\Condition.cs" />
+     <Compile Include="Assets\Scrips\GameControl\StateMachine\State.cs" />
+     <Compile Include="Assets\Scrips\GameControl\StateMachine\StateMachine.cs" />
+     <Compile Include="Assets\Scrips\GameControl\StateMachine\Transition.cs" />
      <Compile Include="Assets\Scrips\Hazards\Explosion.cs" />
+     <Compile Include="Assets\Scrips\UI\PlayerUI.cs" />
      <Compile Include="Assets\Scrips\Weapons\Bow.cs" />
      <Compile Include="Assets\Scrips\Weapons\MachineGun.cs" />
      <Compile Include="Assets\Scrips\Weapons\Pistol.cs" />

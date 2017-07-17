@@ -23,7 +23,6 @@ public class CutterBall : MonoBehaviour , Damagable {
 	private CharacterController sphere;
 	//+++++++++++++++++++++++++++++ Runtime parameters ++++++++++++++++++++++++++++++
 	private MonoBehaviour objective; //the enemy that the MPC whants to kill
-	private Vector3 destinationShift; //The shift on the objective positin applied so the MPC does not run straight into it.
 	private bool stunned = false;
 	private Vector3 currentSpeed;
 	private float lastStunned;
@@ -117,9 +116,6 @@ public class CutterBall : MonoBehaviour , Damagable {
 			}else{
 				objective = HiveMind.getClosestGoodGuy (this.transform.position);
 			}
-			//get new random side
-			Vector2 aux = Random.insideUnitCircle.normalized * close;
-			destinationShift = new Vector3 (aux.x, 0, aux.y);
 		}
 	}
 }
