@@ -11,6 +11,7 @@ public class Rocket : MonoBehaviour {
 	//+++++++++++++++++++++++++++++ Constant parameters ++++++++++++++++++++++++++++++
 	public float speed = 10;
 	public GameObject explosion;
+	public GameObject visiblePart;
 	public float timeStuck = 0;
 	public float ttl = 10;
 	public float diviationMagnitude = 0.1f;
@@ -44,6 +45,7 @@ public class Rocket : MonoBehaviour {
 		//hide rocket
 		var emisor = GetComponent<ParticleSystem> ().emission;
 		emisor.enabled = false;
+		visiblePart.SetActive (false);
 	}
 
 	void Update () {

@@ -11,6 +11,8 @@ public class Pistol : MonoBehaviour, Weapon {
 	//+++++++++++++++++++++++++++++ Constant parameters ++++++++++++++++++++++++++++++
 	public Transform endOfBarrel;
 	public GameObject bulet;
+	public GameObject lightFlash;
+	private Animation lightFlashAnim;
 	public float buletSpeed = 10f;
 	public float acuracy = 0.01f;
 
@@ -48,11 +50,13 @@ public class Pistol : MonoBehaviour, Weapon {
 
 	void Start () {
 		amunition = 20;
+		lightFlashAnim = lightFlash.GetComponent<Animation>();
 	}
 
 	public void atack (){
 
 		Instantiate (bulet, endOfBarrel.position, Quaternion.Euler (endOfBarrel.eulerAngles + (Random.insideUnitSphere * acuracy)));
+		lightFlashAnim.Play ();
 
 	}
 
